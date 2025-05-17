@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Arrays</title>
+</head>
+<body>
+    <h2 id="checkLength"></h2>
+    <ul id="populationList"></ul>
+    <ul id="percentageList"></ul>
+
+    <script>
+        function percentageOfWorld1(population){
+            return (population / 7900) * 100;
+        }
+
+        const population = [1441,1393,61,331];
+        const hasFourElements = population.length === 4;
+
+        document.getElementById("checkLength").textContent = "Array has four elements? " + hasFourElements;
+
+        const popList = document.getElementById("populationList");
+        population.forEach(pop =>{
+            const li = document.createElement("li");
+            li.textContent = `${pop} million people`;
+            popList.appendChild(li);
+        });
+
+        const percentages = population.map(pop => percentageOfWorld1(pop).toFixed(2));
+        const perList = document.getElementById("percentageList");
+        percentages.forEach(perc =>{
+            const li = document.createElement("li");
+            li.textContent = `${perc}% of the world population`;
+            perList.appendChild(li);
+        });
+    </script>
+</body>
+</html>
