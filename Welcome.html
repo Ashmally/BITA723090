@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>welcome</title>
+        <script>
+            function WhatisYouname(){
+                let name = document.getElementById("student");
+                let student = document.getElementById("inserted_name");
+                student.innerHTML="Welcome to the site" + name.value;
+            }
+        </script>
+    </head>
+    <body>
+        <p>What is you name?</p>
+        <input type="text" id="student" value=""/>
+        <button onclick="WhatisYouname()">Submit</button>
+        <p id="inserted_name"></p>
+    </body>
+</html>
