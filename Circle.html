@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>circle</title>
+        <script>
+            function Circle(radius){
+                this.radiusCircle = radius;
+
+                this.getArea = function(){
+                    console.log(Math.PI*radius * radius);
+                }
+                this.getParemeter = function(){
+                    console.log(2 * Math. PI * radius);
+                }
+            }
+            const circle = new Circle(11);
+            circle.getArea();
+            const circle2 =new Circle(44.4);
+            circle2.getParemeter();
+        </script>
+    </head>
+    <body></body>
+</html>
